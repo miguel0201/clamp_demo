@@ -16,11 +16,13 @@ function highlightAppliedWidth() {
 
   const width = window.innerWidth;
   if (width > 1200) {
+    min.classList.remove('highlight');
     val.classList.remove('highlight');
     max.classList.add('highlight');
   } else if (width < 600) {
     min.classList.add('highlight');
     val.classList.remove('highlight');
+    max.classList.remove('highlight');
   } else {
     min.classList.remove('highlight');
     val.classList.add('highlight');
