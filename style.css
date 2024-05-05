@@ -1,0 +1,54 @@
+:root {
+  --main-max: 600px;
+  --main-min: 300px;
+  --main-color: #F41D5C;
+}
+
+span.highlight {
+  font-weight: bold;
+  color: var(--main-color);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+header {
+  background-color: #aaa;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: clamp(var(--main-min), 50%, var(--main-max));
+  text-align: center;
+  height: 200px;
+  background-color: #4FDBBC;
+  color: var(--main-color);
+}
+
+h1 {
+  font-size: clamp(calc(var(--main-min) / 4), 12.5%, calc(var(--main-max) / 4));
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+p {
+  font-size: 2rem;
+  width: 100%;
+  text-align: center;
+}
+
+.container p.info {
+  border-bottom: solid 5px #232323;
+}
+
+main#clamped > p {
+  border-bottom: solid 5px var(--main-color);
+}
